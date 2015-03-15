@@ -1,6 +1,6 @@
 /*
  * jGnash, a personal finance application
- * Copyright (C) 2001-2015 Craig Cavanaugh
+ * Copyright (C) 2001-2013 Craig Cavanaugh
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,6 +19,7 @@ package jgnash.ui.actions;
 
 import java.awt.event.ActionEvent;
 
+import jgnash.ui.report.text.framework.NetWorthTXT;
 import jgnash.ui.util.builder.Action;
 
 /**
@@ -27,11 +28,13 @@ import jgnash.ui.util.builder.Action;
  * @author Craig Cavanaugh
  *
  */
-@Action("report-profitlosstxt-command")
-public class ProfitLossTXTReportAction extends AbstractEnabledAction {
+@Action("report-networthtxt-command")
+public class NetWorthTXTReportAction extends AbstractEnabledAction {
+
+    private static final long serialVersionUID = 0L;
 
     @Override
     public void actionPerformed(final ActionEvent e) {
-        new jgnash.ui.report.text.framework.ProfitLossTXT().run();
+        new NetWorthTXT().run();
     }
 }

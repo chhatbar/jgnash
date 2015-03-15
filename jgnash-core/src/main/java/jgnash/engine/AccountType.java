@@ -86,6 +86,14 @@ public enum AccountType {
         return description;
     }
 
+    public String toString(boolean includeGroupPrefix) {
+        if(includeGroupPrefix)
+        {
+          return getAccountGroup().toString() + ":" + description;
+        }
+        return description;
+    }
+    
     public AccountGroup getAccountGroup() {
         return accountGroup;
     }
